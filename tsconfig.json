@@ -1,0 +1,60 @@
+{
+      "compilerOptions": {
+        /* Specifica la versione target del JavaScript generato */
+        "target": "es5",  /* Compatibile con i browser più vecchi, ma se non hai bisogno di supporto per i browser più vecchi, puoi usare 'es6' o 'esnext'. */
+        
+        /* Specifica il modulo che verrà utilizzato per la risoluzione delle dipendenze */
+        "module": "esnext",  /* Usa moduli ES, che è la scelta migliore per React con Webpack o un altro bundler. */
+        
+        /* Abilita JSX con React */
+        "jsx": "react-jsx", /* Usa la sintassi JSX di React 17+ */
+        
+        /* Definisci il comportamento per il controllo dei tipi */
+        "strict": true,  /* Abilita tutte le opzioni di controllo rigoroso */
+        
+        /* Risoluzione dei moduli */
+        "moduleResolution": "node",  /* Usa il sistema di risoluzione dei moduli di Node.js */
+        
+        /* Abilita l'interoperabilità tra moduli CommonJS e ES6 */
+        "esModuleInterop": true,  /* Consente di importare moduli CommonJS con la sintassi ES6 */
+        
+        /* Forza la coerenza nel caso di maiuscole e minuscole dei nomi dei file */
+        "forceConsistentCasingInFileNames": true,
+    
+        /* Abilita la generazione di file di tipo per le dichiarazioni */
+        "declaration": false,  /* Impostato su false per evitare la generazione di file .d.ts */
+        
+        /* Controllo della libreria */
+        "skipLibCheck": true,  /* Salta la verifica dei tipi nelle librerie per velocizzare la compilazione */
+    
+        /* Gestione delle importazioni */
+        "resolveJsonModule": true,  /* Permette di importare file .json */
+        
+        /* Opzione per la gestione delle variabili di ambiente */
+        "isolatedModules": true,  /* Assicura che ogni file venga trattato come un modulo separato per evitare errori di compilazione */
+        
+        /* Consente l'importazione di moduli TypeScript */
+        "allowSyntheticDefaultImports": true,  /* Permette di importare moduli senza un'export di default */
+    
+        /* Generazione di sorgenti map */
+        "sourceMap": true,  /* Crea i file di mappa delle sorgenti per il debug */
+        
+        /* Ottimizzazione per l'esecuzione rapida dei progetti */
+        "incremental": true,  /* Aggiungi una build incrementale per velocizzare il processo di compilazione */
+        
+        /* Se sei un utente di React, attiva le librerie per React */
+        "lib": ["dom", "esnext"],
+        
+        /* Consente la generazione di file di output per i dichiarativi */
+        "outDir": "./build"  /* Tutti i file compilati TypeScript saranno salvati in una cartella build */
+      },
+      "include": [
+        "src/**/*"  /* Includi tutti i file TypeScript/JSX all'interno della cartella src */
+      ],
+      "exclude": [
+        "node_modules",  /* Escludi la cartella node_modules dalla compilazione */
+        "build"  /* Escludi la cartella build, se esiste */
+      ]
+    }
+    
+  

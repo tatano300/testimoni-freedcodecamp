@@ -1,38 +1,63 @@
 .container-witness{
-    width: 1170px;
-    height: 368px;
+    width: 100%; /* La card occupa tutta la larghezza disponibile */
+    max-width: 1170px; /* Imposta una larghezza massima per evitare che diventi troppo larga */
+    height: auto; /* La card deve adattarsi al contenuto */
     margin: 10px 10px 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #fff;
     box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+    padding: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden; /* Nasconde qualsiasi contenuto che esce fuori dalla card */
+    transition: all 0.3s ease;
 }
+
+.container-witness:focus {
+    outline: 2px solid #007bff; 
+}
+
 
 .image-witness{
-  height: 100%;
-  width: auto;
+    height: 100%;
+    width: auto;
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0;
 }
 
+.container-witness:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 6px 18px 2px rgb(0 0 0 / 15%); 
+}
+
+
 .container-text-witness{
+    padding: 20px; 
     text-align: center;
-    padding: 40px;
     font-family: Lato, sans-serif;
     font-weight: 400;
     line-height: 1.5rem;
+    color: #333;
 }
 
 .name-witness{
     font-size: 1.3rem;
+    font-weight: bold;
+    color: #000;
 }
 
 .prosecution-testimony{
  font-size: 1.3rem;
  margin-top: 15px;
  padding-bottom: 30px;
+ color: #555;
 }
 
 .text-witness{
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: justify;
+    color: #666;
 }
