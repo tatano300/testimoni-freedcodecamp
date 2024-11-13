@@ -1,15 +1,27 @@
-import { useParams } from "react-router-dom";
+import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import '../stylesheets/WitnessDetail.css';
 
-function WitnessDetail() {
-  const { id } = useParams(); // Ottieni l'id del testimone dalla URL
+const WitnessDetail: React.FC = () => {
+  const navigate = useNavigate();
+  const { id } = useParams<{ id: string }>(); // Ottieni l'ID dalla URL
+
+  // Funzione per tornare indietro
+  const handleBack = () => {
+    navigate(-1); // Torna alla pagina precedente
+  };
 
   return (
-    <div>
-      <h1>Dettagli del Testimone</h1>
-      <p>Testimone ID: {id}</p>
-      {/* Aggiungi qui i dettagli aggiuntivi per il testimone */}
+    <div className="witness-detail">
+      <button onClick={handleBack} className="back-button">
+        Indietro
+      </button>
+      
+      {/* Contenuto della pagina del testimone */}
+      <h2>Dettagli del Testimone {id}</h2>
+      {/* Mostra altri dettagli del testimone qui */}
     </div>
   );
-}
+};
 
 export default WitnessDetail;

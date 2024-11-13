@@ -1,7 +1,7 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom'; // Assicurati di importare questi
+import { Route, Routes } from 'react-router-dom'; 
 import Witness from './components/Witness';
-import WitnessDetail from './components/WitnessDetail'; // Assicurati che questo esista!
+import WitnessDetail from './components/WitnessDetail'; 
 
 function App() {
   const testimonials = [
