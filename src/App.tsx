@@ -51,7 +51,12 @@ function App() {
               witness={witness}
             />
           ))} />
-          <Route path="/witness/:id" element={<WitnessDetail />} /> {/* Dettaglio del testimone */}
+          
+          {/* Passa 'testimonials' al componente WitnessDetail */}
+          <Route 
+            path="/witness/:id" 
+            element={<WitnessDetail testimonials={testimonials} />} 
+          />
         </Routes>
       </div>
     </div>
