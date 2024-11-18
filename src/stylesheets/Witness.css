@@ -1,64 +1,71 @@
-.container-witness{
-    width: 100%; /* La card occupa tutta la larghezza disponibile */
-    max-width: 1170px; /* Imposta una larghezza massima per evitare che diventi troppo larga */
-    height: auto; /* La card deve adattarsi al contenuto */
-    margin: 10px 10px 50px;
+.container-witness {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1170px;
+    margin: 20px auto;
     background-color: #fff;
-    box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
-    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    cursor: pointer;
-    outline: none;
-    overflow: hidden; /* Nasconde qualsiasi contenuto che esce fuori dalla card */
+    overflow: hidden;
     transition: all 0.3s ease;
 }
 
-.container-witness:focus {
-    outline: 2px solid #007bff; 
-}
-
-
-.image-witness{
-    height: 100%;
-    width: auto;
-    object-fit: cover; 
-    border-radius: 8px 8px 0 0;
-}
-
 .container-witness:hover {
-    background-color: #f0f0f0;
-    box-shadow: 0 6px 18px 2px rgb(0 0 0 / 15%); 
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+.image-witness {
+    flex: 1;
+    height: 100%;
+    max-width: 300px; /* Riduce la larghezza massima per l'immagine */
+    object-fit: cover;
+    border-right: 2px solid #eee; /* Linea di separazione tra foto e testo */
+}
 
-.container-text-witness{
-    padding: 20px; 
-    text-align: center;
-    font-family: Lato, sans-serif;
-    font-weight: 400;
-    line-height: 1.5rem;
+.container-text-witness {
+    flex: 2;
+    padding: 20px 30px;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
     color: #333;
 }
 
-.name-witness{
-    font-size: 1.3rem;
+.name-witness {
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #000;
+    margin-bottom: 10px;
+    color: #222;
 }
 
-.prosecution-testimony{
- font-size: 1.3rem;
- margin-top: 15px;
- padding-bottom: 30px;
- color: #555;
+.prosecution-testimony {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-.text-witness{
+.text-witness {
     font-size: 1rem;
-    text-align: justify;
+    line-height: 1.6;
     color: #666;
+    text-align: justify;
+}
+
+.btn-read-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-read-more:hover {
+    background-color: #0056b3;
 }
 

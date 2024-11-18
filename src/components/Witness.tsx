@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Importa Link per la navigazione
+import { Link } from "react-router-dom";
 import '../stylesheets/Witness.css';
 
 type WitnessProps = {
@@ -12,33 +12,37 @@ type WitnessProps = {
   witness: string;
 };
 
-function Witness({
+const Witness: React.FC<WitnessProps> = ({
   id,
   name,
   country,
   image,
   prosecution,
   company,
-  witness,
-}: WitnessProps) {
+  witness
+}) => {
   return (
     <div className="container-witness">
-      <Link to={`/witness/${id}`}> {/* Usa Link per navigare alla pagina del testimone */}
-        <img
-          className="image-witness"
-          src={require(`../images/${image}.png`)} // Carica l'immagine del testimone
-          alt="foto del testimone"
-        />
-        <div className="container-text-witness">
-          <p className="name-witness">
-            <strong>{name}</strong> en {country}
-          </p>
-          <p className="prosecution-testimony">
-            {prosecution} en <strong>{company}</strong>
-          </p>
-          <p className="text-witness">"{witness}"</p>
-        </div>
-      </Link>
+      {/* Foto a sinistra */}
+      <img
+        className="image-witness"
+        src={require(`../images/${image}.png`)}
+        alt={`Foto di ${name}`}
+      />
+
+      {/* Testo a destra */}
+      <div className="container-text-witness">
+        <p className="name-witness">
+          <strong>{name}</strong> da {country}
+        </p>
+        <p className="prosecution-testimony">
+          {prosecution} presso <strong>{company}</strong>
+        </p>
+        <p className="text-witness">"{witness}"</p>
+        <Link to={`/witness/${id}`} className="btn-read-more">
+          Read More
+        </Link>
+      </div>
     </div>
   );
 }
